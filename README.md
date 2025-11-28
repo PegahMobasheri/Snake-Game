@@ -1,7 +1,7 @@
 # 🐍 Snake Game (HTML + TailwindCSS + JavaScript)
 
 A simple and responsive Snake Game built with **HTML**, **Tailwind CSS**, and **JavaScript**.
-Playable with **keyboard controls** (desktop) and **on-screen buttons** (mobile).
+Playable with **keyboard controls** (desktop) and **on-screen buttons**.
 
 ---
 
