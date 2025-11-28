@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/stylesheet/main.css">
+   <title>Document</title>
+</head>
+
+<body class="w-full min-h-dvh bg-[#100c16] relative py-4 lg:py-8">
+   <header class="w-[90%] h-20 bg-[#272031] mx-auto  mb-8 p-1.5 md:w-[95%]  lg:mb-10 3xl:container 3xl:mx-auto">
+      <div class="w-full h-full  border-6 border-[#100c16] mx-auto my-auto flex justify-center items-center">
+         <figure class="w-8 h-8  me-2 lg:w-10   lg:h-10   lg:me-4   ">
+            <img class="w-full h-full object-cover" src="assets/img/snake2.png" alt="">
+         </figure>
+         <h1 class="my-font text-[#ff76ff] text-[40px] uppercase lg:text-[55px]">snake game</h1>
+      </div>
+   </header>
+   <!-- end header///  -->
+   <main class="w-full h-fit 3xl:container 3xl:mx-auto ">
+      <!-- row1//  -->
+      <div class="w-[270px] h-[60px] bg-[#272031] mx-auto p-1.5  md:w-80 lg:w-[470px]  lg:h-[65px] ">
+         <div
+            class="w-full h-full  border-6 border-[#100c16] mx-auto my-auto flex justify-between items-center px-2 lg:px-5">
+            <div class="flex w-fit h-full items-center">
+               <!-- score//  -->
+               <h2 class="my-font text-[#ff76ff] text-[22px] capitalize lg:text-[30px]">score :</h2>
+               <h3 class="my-font text-[#ff76ff] text-[22px] ms-1 lg:text-[30px]">0</h3>
+            </div>
+            <div id="_refresh" class="flex w-fit h-full items-center cursor-pointer ">
+               <!-- reset//  -->
+               <?xml version="1.0" encoding="UTF-8"?><svg id="refresh-solid" xmlns="http://www.w3.org/2000/svg"
+                  fill="#ff76ff" width="16px" height="16px" viewBox="0 0 24 24">
+                  <polygon
+                     points="23 14 23 15 22 15 22 17 21 17 21 19 20 19 20 20 19 20 19 21 17 21 17 22 15 22 15 23 9 23 9 22 7 22 7 21 5 21 5 20 3 20 3 21 2 21 2 22 1 22 1 14 9 14 9 15 8 15 8 16 7 16 7 18 8 18 8 19 10 19 10 20 14 20 14 19 16 19 16 18 17 18 17 17 18 17 18 15 19 15 19 14 23 14" />
+                  <polygon
+                     points="23 2 23 10 15 10 15 9 16 9 16 8 17 8 17 6 16 6 16 5 14 5 14 4 10 4 10 5 8 5 8 6 7 6 7 7 6 7 6 9 5 9 5 10 1 10 1 9 2 9 2 7 3 7 3 5 4 5 4 4 5 4 5 3 7 3 7 2 9 2 9 1 15 1 15 2 17 2 17 3 19 3 19 4 21 4 21 3 22 3 22 2 23 2" />
+               </svg>
+               <h2 class="my-font text-[#ff76ff] text-[22px] capitalize ms-1.5 lg:text-[30px]">restart</h2>
+            </div>
+         </div>
+      </div>
+      <!-- start row2//  -->
+      <div class="w-[270px] h-[270px] bg-[#272031] mx-auto p-1.5 pt-0 md:w-80  md:h-80  lg:w-[470px]  lg:h-[470px]">
+         <div id="_board"
+            class="w-full h-full  border-6 border-[#100c16] mx-auto my-auto flex flex-wrap *:w-[5%] *:h-[5%] *:border *:border-[#0d0912]">
+            <!-- game board//  -->
+             </div>
+      </div>
+      <!-- end row2//  -->
+      <!-- start control bottuns//  -->
+      <div
+         class="w-[150px] h-fit  mx-auto mt-6 *:h-fit *:w-fit *:mx-auto *:my-1.5 lg:absolute lg:top-[40%] lg:-translate-y-[40%] lg:left-[88%] lg:-translate-x-[88%]  xl:left-[80%] xl:-translate-x-[80%]">
+         <div class=" border-6 border-[#272031] px-1 py-2 cursor-pointer ">
+            <!-- 1//  -->
+            <?xml version="1.0" encoding="UTF-8"?><svg id="_arrow-up" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" fill="#ff76ff" width="18px" height="18px">
+               <polygon
+                  points="11 1 13 1 13 2 14 2 14 3 15 3 15 4 16 4 16 5 17 5 17 6 18 6 18 7 19 7 19 8 20 8 20 9 21 9 21 10 22 10 22 11 23 11 23 12 22 12 22 13 21 13 21 14 20 14 20 13 19 13 19 12 18 12 18 11 17 11 17 10 16 10 16 9 15 9 15 8 14 8 14 23 10 23 10 8 9 8 9 9 8 9 8 10 7 10 7 11 6 11 6 12 5 12 5 13 4 13 4 14 3 14 3 13 2 13 2 12 1 12 1 11 2 11 2 10 3 10 3 9 4 9 4 8 5 8 5 7 6 7 6 6 7 6 7 5 8 5 8 4 9 4 9 3 10 3 10 2 11 2 11 1" />
+            </svg>
+         </div>
+         <div class="flex  gap-6">
+            <!-- 2,3//  -->
+            <div class=" border-6 border-[#272031] py-1 px-2 cursor-pointer ">
+               <?xml version="1.0" encoding="UTF-8"?><svg id="_arrow-left" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24" fill="#ff76ff" width="18px" height="18px">
+                  <polygon
+                     points="1 13 1 11 2 11 2 10 3 10 3 9 4 9 4 8 5 8 5 7 6 7 6 6 7 6 7 5 8 5 8 4 9 4 9 3 10 3 10 2 11 2 11 1 12 1 12 2 13 2 13 3 14 3 14 4 13 4 13 5 12 5 12 6 11 6 11 7 10 7 10 8 9 8 9 9 8 9 8 10 23 10 23 14 8 14 8 15 9 15 9 16 10 16 10 17 11 17 11 18 12 18 12 19 13 19 13 20 14 20 14 21 13 21 13 22 12 22 12 23 11 23 11 22 10 22 10 21 9 21 9 20 8 20 8 19 7 19 7 18 6 18 6 17 5 17 5 16 4 16 4 15 3 15 3 14 2 14 2 13 1 13" />
+               </svg>
+            </div>
+            <!-- ///////////////////////  -->
+            <div class=" border-6 border-[#272031] py-1 px-2 cursor-pointer ">
+               <?xml version="1.0" encoding="UTF-8"?><svg id="_arrow-right" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24 " fill="#ff76ff" width="18px" height="18px">
+                  <polygon
+                     points="23 11 23 13 22 13 22 14 21 14 21 15 20 15 20 16 19 16 19 17 18 17 18 18 17 18 17 19 16 19 16 20 15 20 15 21 14 21 14 22 13 22 13 23 12 23 12 22 11 22 11 21 10 21 10 20 11 20 11 19 12 19 12 18 13 18 13 17 14 17 14 16 15 16 15 15 16 15 16 14 1 14 1 10 16 10 16 9 15 9 15 8 14 8 14 7 13 7 13 6 12 6 12 5 11 5 11 4 10 4 10 3 11 3 11 2 12 2 12 1 13 1 13 2 14 2 14 3 15 3 15 4 16 4 16 5 17 5 17 6 18 6 18 7 19 7 19 8 20 8 20 9 21 9 21 10 22 10 22 11 23 11" />
+               </svg>
+            </div>
+         </div>
+         <div class=" border-6 border-[#272031] px-1 py-2 cursor-pointer ">
+            <!-- 4//  -->
+            <?xml version="1.0" encoding="UTF-8"?><svg id="_arrow-down" xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24" fill="#ff76ff" width="18px" height="18px">
+               <polygon
+                  points="13 23 11 23 11 22 10 22 10 21 9 21 9 20 8 20 8 19 7 19 7 18 6 18 6 17 5 17 5 16 4 16 4 15 3 15 3 14 2 14 2 13 1 13 1 12 2 12 2 11 3 11 3 10 4 10 4 11 5 11 5 12 6 12 6 13 7 13 7 14 8 14 8 15 9 15 9 16 10 16 10 1 14 1 14 16 15 16 15 15 16 15 16 14 17 14 17 13 18 13 18 12 19 12 19 11 20 11 20 10 21 10 21 11 22 11 22 12 23 12 23 13 22 13 22 14 21 14 21 15 20 15 20 16 19 16 19 17 18 17 18 18 17 18 17 19 16 19 16 20 15 20 15 21 14 21 14 22 13 22 13 23" />
+            </svg>
+         </div>
+
+      </div>
+      <!-- end control buttons//  -->
+
+   </main>
+
+   <!-- footer//  -->
+
+   <footer
+      class="w-[90%] h-[150px] bg-[#272031] mx-auto  mt-8 p-1.5 md:w-[95%] lg:h-[180px] lg:mt-16 3xl:container 3xl:mx-auto ">
+      <div class="w-full h-full  border-6 border-[#100c16] p-4 mx-auto my-auto flex justify-center items-center">
+         <nav class="w-fit h-fit">
+            <ul class=" w-fit h-fit leading-tight ">
+               <li class="w-fit h-fit my-font text-[#ff76ff] text-[22px] uppercase lg:text-[28px]">by pegah mobasheri
+               </li>
+               <li class="w-fit h-fit"><a
+                     class="flex items-center gap-2 my-font text-[#ff76ff] text-[22px] uppercase lg:text-[28px]"
+                     href="https://www.instagram.com/pegahmobasherii">
+                     <?xml version="1.0" encoding="UTF-8"?><svg id="instagram" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="#ff76ff" width="18px" height="18px">
+                        <path
+                           d="m17,9v-1h-1v-1h-1v-1h-6v1h-1v1h-1v1h-1v6h1v1h1v1h1v1h6v-1h1v-1h1v-1h1v-6h-1Zm-1,5h-1v1h-1v1h-4v-1h-1v-1h-1v-4h1v-1h1v-1h4v1h1v1h1v4Z" />
+                        <path
+                           d="m22,5v-2h-1v-1h-2v-1H5v1h-2v1h-1v2h-1v14h1v2h1v1h2v1h14v-1h2v-1h1v-2h1V5h-1Zm-1,14h-1v1h-1v1H5v-1h-1v-1h-1V5h1v-1h1v-1h14v1h1v1h1v14Z" />
+                        <rect x="17" y="5" width="2" height="2" />
+                     </svg>instagram
+                  </a></li>
+               <li class="w-fit h-fit"><a
+                     class="flex items-center gap-2 my-font text-[#ff76ff] text-[22px] uppercase lg:text-[28px]"
+                     href="https://www.linkedin.com/in/pegah-mobasheri">
+                     <?xml version="1.0" encoding="UTF-8"?><svg id="linkedin" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="#ff76ff" width="18px" height="18px">
+                        <path
+                           d="m22,2v-1H2v1h-1v20h1v1h20v-1h1V2h-1Zm-9,10v8h-3v-11h3v1h1v-1h4v1h1v10h-3v-8h-3Zm-9-4v-3h3v3h-3Zm3,1v11h-3v-11h3Z" />
+                     </svg>linkedin
+                  </a></li>
+               <li class="w-fit h-fit"><a
+                     class="flex items-center gap-2 my-font text-[#ff76ff] text-[22px] uppercase lg:text-[28px]"
+                     href="https://github.com/PegahMobasheri">
+                     <?xml version="1.0" encoding="UTF-8"?><svg id="github" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" fill="#ff76ff" width="18px" height="18px">
+                        <polygon
+                           points="23 9 23 15 22 15 22 17 21 17 21 19 20 19 20 20 19 20 19 21 18 21 18 22 16 22 16 23 15 23 15 18 14 18 14 17 15 17 15 16 17 16 17 15 18 15 18 14 19 14 19 9 18 9 18 6 16 6 16 7 15 7 15 8 14 8 14 7 10 7 10 8 9 8 9 7 8 7 8 6 6 6 6 9 5 9 5 14 6 14 6 15 7 15 7 16 9 16 9 18 7 18 7 17 6 17 6 16 4 16 4 17 5 17 5 19 6 19 6 20 9 20 9 23 8 23 8 22 6 22 6 21 5 21 5 20 4 20 4 19 3 19 3 17 2 17 2 15 1 15 1 9 2 9 2 7 3 7 3 5 4 5 4 4 5 4 5 3 7 3 7 2 9 2 9 1 15 1 15 2 17 2 17 3 19 3 19 4 20 4 20 5 21 5 21 7 22 7 22 9 23 9" />
+                     </svg>github
+                  </a></li>
+
+            </ul>
+         </nav>
+      </div>
+   </footer>
+ 
+</body>
+<script>
+   const SIZE = 20
+   const board = document.getElementById("_board")
+   const _score = document.querySelector("h3")
+   let cells = []
+   let snake = [{ x: 10, y: 10 }]
+   let direction = { x: 1, y: 0 }
+   let nextDirection = { x: 1, y: 0 }
+   let food = null
+   let score = 0
+   let intervalId = null
+
+   // create board// 
+   function createBoard() {
+      Array.from({ length: SIZE * SIZE }).forEach((val, i) => {
+         const cell = document.createElement("div")
+         cell.className = "cell"
+         cell.dataset.x = i % SIZE
+         cell.dataset.y = Math.floor(i / SIZE)
+         board.appendChild(cell)
+         cells.push(cell)
+      })
+   }
+   // create board// 
+
+   // catch cell// 
+   function getCell(x, y) {
+      return cells[y * SIZE + x]
+   }
+
+   // catch cell// 
+
+   // create food// 
+   function generateFood() {
+      let x, y, valid = false
+      while (!valid) {
+         x = Math.floor(Math.random() * SIZE)
+         y = Math.floor(Math.random() * SIZE)
+         valid = !snake.some(p => p.x === x && p.y === y)
+      }
+      food = { x, y }
+   }
+
+   // create food// 
+
+   //  dispaly snake and food // 
+   function render() {
+      cells.forEach(c => c.className = "cell");
+      if (food) getCell(food.x, food.y).classList.add("food")
+
+      snake.forEach((item, index) => {
+         const c = getCell(item.x, item.y)
+         c.classList.add("snake")
+         if (index === 0) c.classList.add("head")
+      })
+      _score.textContent = score
+   }
+
+   //  dispaly snake and food // 
+
+   // start game// 
+   function gameLoop() {
+      direction = nextDirection;
+      const head = snake[0]
+      const newX = head.x + direction.x
+      const newY = head.y + direction.y
+      if (newX < 0 || newX >= SIZE || newY < 0 || newY >= SIZE) {
+         endGame() 
+      
+         return
+      }
+      if (snake.some(p => p.x === newX && p.y === newY)) {
+         endGame()
+         return
+      }
+      snake.unshift({ x: newX, y: newY })
+      if (food && newX === food.x && newY === food.y) {
+         score++
+         generateFood()
+         
+      } else {
+         snake.pop()
+      }
+
+      render()
+   }
+   // end game// 
+
+   //   game over// 
+   function endGame() {
+      
+      clearInterval(intervalId);
+      alert("Game Over! Score: " + score)
+      
+   }
+
+   //   game over// 
+
+   // control buttuns // 
+   window.addEventListener("keydown", e => {
+      if (e.key === "ArrowUp" && direction.y !== 1) nextDirection = { x: 0, y: -1 }
+      else if (e.key === "ArrowDown" && direction.y !== -1) nextDirection = { x: 0, y: 1 }
+      else if (e.key === "ArrowLeft" && direction.x !== 1) nextDirection = { x: -1, y: 0 }
+      else if (e.key === "ArrowRight" && direction.x !== -1) nextDirection = { x: 1, y: 0 }
+   })
+
+
+   document.getElementById("_arrow-up").onclick = () => { if (direction.y !== 1) nextDirection = { x: 0, y: -1 } }
+   document.getElementById("_arrow-down").onclick = () => { if (direction.y !== -1) nextDirection = { x: 0, y: 1 } }
+   document.getElementById("_arrow-left").onclick = () => { if (direction.x !== 1) nextDirection = { x: -1, y: 0 } }
+   document.getElementById("_arrow-right").onclick = () => { if (direction.x !== -1) nextDirection = { x: 1, y: 0 } }
+
+   // control buttuns // 
+
+   // restart// 
+   document.getElementById("_refresh").onclick = () => {
+      clearInterval(intervalId)
+      snake = [{ x: 10, y: 10 }]
+      direction = { x: 1, y: 0 }
+      nextDirection = { x: 1, y: 0 }
+      score = 0;
+      generateFood()
+      render()
+      intervalId = setInterval(gameLoop, 180)
+
+   }
+
+   // restart// 
+
+   //   start game again // 
+   createBoard()
+   generateFood()
+   render()
+   intervalId = setInterval(gameLoop, 180)
+
+
+</script>
+
+</html>
