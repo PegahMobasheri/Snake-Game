@@ -6,7 +6,7 @@ Playable with **keyboard controls** (desktop) and **on-screen buttons** (mobile)
 ---
 
 ## 🎮 Live Demo
-🔗 **View Project:** ()
+🔗 **View Project:** (https://pegahmobasheri.github.io/Snake-Game/)
 
 
 
