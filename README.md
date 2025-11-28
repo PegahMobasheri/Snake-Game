@@ -12,8 +12,8 @@ Playable with **keyboard controls** (desktop) and **on-screen buttons** (mobile)
 
 ---
 
-## 📸 Screenshots
-![Screenshot](./assets/screenshots/screen1.png)
+## 📸 Screenshot
+![Screenshot](https://github.com/user-attachments/assets/88039a15-586a-42e1-b9e4-a4ea00ac34aa)
 
 ---
 
