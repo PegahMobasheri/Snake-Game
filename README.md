@@ -13,7 +13,7 @@ Playable with **keyboard controls** (desktop) and **on-screen buttons**.
 ---
 
 ## 📸 Screenshot
-![Screenshot]()
+![Screenshot](https://github.com/user-attachments/assets/372bc9b1-292c-49a9-b4b7-5fdf607dddec)
 
 ---
 
