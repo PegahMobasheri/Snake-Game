@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+@import "tailwindcss";
+
+.my-font {
+   font-family: "Jersey 10", sans-serif;
+   
+
+}
+.divs {
+border: 1px solid #0d0912;
+
+}
+
+.snake {
+background-color: #ff76ff;
+box-shadow: 0 0 8px #ff76ff, 0 0 15px #ff76ff inset; 
+transition:  0.1s;
+}
+
+.head {
+background-color: #ff00ff;
+box-shadow: 0 0 12px #ff00ff, 0 0 20px #ff00ff inset;
+}
+
+.food {
+background-color: #76ff76;
+box-shadow: 0 0 10px #76ff76, 0 0 18px #76ff76 inset;
+}
